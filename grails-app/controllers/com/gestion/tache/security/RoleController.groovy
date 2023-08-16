@@ -25,6 +25,7 @@ class RoleController {
         }
         respond roleService.list(params)
     }
+
     @Secured(['ROLE_ADMIN'])
     def get_role_by_authority(String authority){
         Role role = Role.findByAuthority(authority)
@@ -58,7 +59,6 @@ class RoleController {
             notFound()
             return
         }
-
         try {
             roleService.save(role)
         } catch (ValidationException e) {

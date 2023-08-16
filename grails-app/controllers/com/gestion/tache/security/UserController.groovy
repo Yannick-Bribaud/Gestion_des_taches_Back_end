@@ -13,10 +13,7 @@ class UserController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond userService.list(params), model:[userCount: userService.count()]
-    }
+    def index(Integer max) {}
 
     @Secured(['ROLE_ADMIN'])
     def list(){
