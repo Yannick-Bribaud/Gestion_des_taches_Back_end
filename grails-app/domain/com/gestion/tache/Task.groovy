@@ -1,6 +1,6 @@
 package com.gestion.tache
 
-class Task implements Serializable{
+class Task implements Serializable {
 
     String nameTask
     Date dateTaskCreated

@@ -3,7 +3,7 @@ package com.gestion.tache
 import com.gestion.tache.security.User
 import groovy.transform.ToString
 
-class TaskUser extends User{
+class TaskUser extends User {
 
     String firstName
     String lastName

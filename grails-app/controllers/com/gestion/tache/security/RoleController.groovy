@@ -13,10 +13,7 @@ class RoleController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond roleService.list(params), model:[roleCount: roleService.count()]
-    }
+    def index(Integer max) {}
 
     def list(){
         if(roleService.list(params)==null){
